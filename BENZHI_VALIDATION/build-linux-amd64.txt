@@ -1,0 +1,44 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from benzhi.Dockerfile
+#1 transferring dockerfile: 128B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/golang:1.22
+#2 DONE 0.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/golang:1.22@sha256:1cf6c45ba39db9fd6db16922041d074a63c935556a05c5ccb62d181034df7f02
+#4 resolve docker.io/library/golang:1.22@sha256:1cf6c45ba39db9fd6db16922041d074a63c935556a05c5ccb62d181034df7f02 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 78.97kB 0.0s done
+#5 DONE 0.0s
+
+#6 [2/4] WORKDIR /app
+#6 CACHED
+
+#7 [3/4] COPY . .
+#7 DONE 0.1s
+
+#8 [4/4] RUN go build ./...
+#8 DONE 13.1s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 3.8s done
+#9 exporting manifest sha256:4ce478d613b86eb700ffc3f90d6e9cde969ac28515920e1c784fd4078fdac591 0.0s done
+#9 exporting config sha256:995cb022e4e6d14493c56489c8dddaaa4cd768cfcd294ad5aad20726e91de63d 0.0s done
+#9 exporting attestation manifest sha256:f8b1bedfa82f94a39ddf099b2577ba4fd7f92fb1c168b6b3dd7d02e5f5e71308 0.0s done
+#9 exporting manifest list sha256:2169c919f9218599fd87bf77589f3ae7041403af7587cf4a489b801f96024b93 0.0s done
+#9 naming to docker.io/library/go-home-inventory-bug4-candidate-linux-amd64:latest
+#9 naming to docker.io/library/go-home-inventory-bug4-candidate-linux-amd64:latest done
+#9 unpacking to docker.io/library/go-home-inventory-bug4-candidate-linux-amd64:latest
+#9 unpacking to docker.io/library/go-home-inventory-bug4-candidate-linux-amd64:latest 0.8s done
+#9 DONE 4.8s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/auuj7ojpyqviac1murs7tpead
