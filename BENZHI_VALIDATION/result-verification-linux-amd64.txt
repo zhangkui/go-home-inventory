@@ -1,0 +1,13 @@
+docker_exit=0
+go version go1.22.12 linux/amd64
+ok  	github.com/zhangkui/go-home-inventory/internal/warranty	0.002s
+ok  	github.com/zhangkui/go-home-inventory/internal/warranty	0.003s
+?   	github.com/zhangkui/go-home-inventory/cmd/server	[no test files]
+?   	github.com/zhangkui/go-home-inventory/internal/domain	[no test files]
+ok  	github.com/zhangkui/go-home-inventory/internal/httpapi	0.003s
+ok  	github.com/zhangkui/go-home-inventory/internal/inventory	0.003s
+ok  	github.com/zhangkui/go-home-inventory/internal/location	0.003s
+ok  	github.com/zhangkui/go-home-inventory/internal/reminder	0.002s
+ok  	github.com/zhangkui/go-home-inventory/internal/repair	0.003s
+ok  	github.com/zhangkui/go-home-inventory/internal/warranty	0.003s
+RESULTS build=0 verification=0 private=0 all=0 no_git=0 answer_scan=0
