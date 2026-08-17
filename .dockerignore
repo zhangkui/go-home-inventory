@@ -1,0 +1,9 @@
+.git
+.gitignore
+cases/
+private_tests/
+patches/
+gold_patch.patch
+bug_fix_prompts.md
+trajectories/
+*.log
