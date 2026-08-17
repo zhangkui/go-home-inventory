@@ -1,0 +1,65 @@
+docker_exit=0
+go version go1.22.12 linux/amd64
+--- FAIL: TestVerificationAllowsNoCostWarrantyRepair (0.00s)
+    no_cost_repair_verification_test.go:18: no-cost repair should be recorded: invalid repair
+FAIL
+FAIL	github.com/zhangkui/go-home-inventory/internal/repair	0.003s
+FAIL
+--- FAIL: TestPrivateComplimentaryServiceIsValidHistory (0.00s)
+    free_repair_private_test.go:15: invalid repair
+--- FAIL: TestPrivateComplimentaryServiceIsValidHistory (0.00s)
+    free_repair_private_test.go:15: invalid repair
+--- FAIL: TestPrivateComplimentaryServiceIsValidHistory (0.00s)
+    free_repair_private_test.go:15: invalid repair
+--- FAIL: TestPrivateComplimentaryServiceIsValidHistory (0.00s)
+    free_repair_private_test.go:15: invalid repair
+--- FAIL: TestPrivateComplimentaryServiceIsValidHistory (0.00s)
+    free_repair_private_test.go:15: invalid repair
+--- FAIL: TestPrivateComplimentaryServiceIsValidHistory (0.00s)
+    free_repair_private_test.go:15: invalid repair
+--- FAIL: TestPrivateComplimentaryServiceIsValidHistory (0.00s)
+    free_repair_private_test.go:15: invalid repair
+--- FAIL: TestPrivateComplimentaryServiceIsValidHistory (0.00s)
+    free_repair_private_test.go:15: invalid repair
+--- FAIL: TestPrivateComplimentaryServiceIsValidHistory (0.00s)
+    free_repair_private_test.go:15: invalid repair
+--- FAIL: TestPrivateComplimentaryServiceIsValidHistory (0.00s)
+    free_repair_private_test.go:15: invalid repair
+--- FAIL: TestPrivateComplimentaryServiceIsValidHistory (0.00s)
+    free_repair_private_test.go:15: invalid repair
+--- FAIL: TestPrivateComplimentaryServiceIsValidHistory (0.00s)
+    free_repair_private_test.go:15: invalid repair
+--- FAIL: TestPrivateComplimentaryServiceIsValidHistory (0.00s)
+    free_repair_private_test.go:15: invalid repair
+--- FAIL: TestPrivateComplimentaryServiceIsValidHistory (0.00s)
+    free_repair_private_test.go:15: invalid repair
+--- FAIL: TestPrivateComplimentaryServiceIsValidHistory (0.00s)
+    free_repair_private_test.go:15: invalid repair
+--- FAIL: TestPrivateComplimentaryServiceIsValidHistory (0.00s)
+    free_repair_private_test.go:15: invalid repair
+--- FAIL: TestPrivateComplimentaryServiceIsValidHistory (0.00s)
+    free_repair_private_test.go:15: invalid repair
+--- FAIL: TestPrivateComplimentaryServiceIsValidHistory (0.00s)
+    free_repair_private_test.go:15: invalid repair
+--- FAIL: TestPrivateComplimentaryServiceIsValidHistory (0.00s)
+    free_repair_private_test.go:15: invalid repair
+--- FAIL: TestPrivateComplimentaryServiceIsValidHistory (0.00s)
+    free_repair_private_test.go:15: invalid repair
+FAIL
+FAIL	github.com/zhangkui/go-home-inventory/internal/repair	0.005s
+FAIL
+?   	github.com/zhangkui/go-home-inventory/cmd/server	[no test files]
+?   	github.com/zhangkui/go-home-inventory/internal/domain	[no test files]
+ok  	github.com/zhangkui/go-home-inventory/internal/httpapi	0.007s
+ok  	github.com/zhangkui/go-home-inventory/internal/inventory	0.005s
+ok  	github.com/zhangkui/go-home-inventory/internal/location	0.007s
+ok  	github.com/zhangkui/go-home-inventory/internal/reminder	0.006s
+--- FAIL: TestPrivateComplimentaryServiceIsValidHistory (0.00s)
+    free_repair_private_test.go:15: invalid repair
+--- FAIL: TestVerificationAllowsNoCostWarrantyRepair (0.00s)
+    no_cost_repair_verification_test.go:18: no-cost repair should be recorded: invalid repair
+FAIL
+FAIL	github.com/zhangkui/go-home-inventory/internal/repair	0.009s
+ok  	github.com/zhangkui/go-home-inventory/internal/warranty	0.005s
+FAIL
+RESULTS build=0 verification=1 private=1 all=1 no_git=0 answer_scan=0

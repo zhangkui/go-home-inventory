@@ -8,7 +8,7 @@
 #2 DONE 0.2s
 
 #3 [internal] load .dockerignore
-#3 transferring context: 2B done
+#3 transferring context: 143B done
 #3 DONE 0.0s
 
 #4 [1/4] FROM docker.io/library/golang:1.22@sha256:1cf6c45ba39db9fd6db16922041d074a63c935556a05c5ccb62d181034df7f02
@@ -16,29 +16,28 @@
 #4 DONE 0.0s
 
 #5 [internal] load build context
-#5 transferring context: 78.97kB 0.0s done
+#5 transferring context: 3.46kB done
 #5 DONE 0.0s
 
 #6 [2/4] WORKDIR /app
 #6 CACHED
 
 #7 [3/4] COPY . .
-#7 DONE 0.1s
+#7 DONE 0.0s
 
 #8 [4/4] RUN go build ./...
-#8 DONE 13.1s
+#8 DONE 11.8s
 
 #9 exporting to image
 #9 exporting layers
-#9 exporting layers 3.8s done
-#9 exporting manifest sha256:4ce478d613b86eb700ffc3f90d6e9cde969ac28515920e1c784fd4078fdac591 0.0s done
-#9 exporting config sha256:995cb022e4e6d14493c56489c8dddaaa4cd768cfcd294ad5aad20726e91de63d 0.0s done
-#9 exporting attestation manifest sha256:f8b1bedfa82f94a39ddf099b2577ba4fd7f92fb1c168b6b3dd7d02e5f5e71308 0.0s done
-#9 exporting manifest list sha256:2169c919f9218599fd87bf77589f3ae7041403af7587cf4a489b801f96024b93 0.0s done
-#9 naming to docker.io/library/go-home-inventory-bug4-candidate-linux-amd64:latest
-#9 naming to docker.io/library/go-home-inventory-bug4-candidate-linux-amd64:latest done
-#9 unpacking to docker.io/library/go-home-inventory-bug4-candidate-linux-amd64:latest
-#9 unpacking to docker.io/library/go-home-inventory-bug4-candidate-linux-amd64:latest 0.8s done
-#9 DONE 4.8s
+#9 exporting layers 1.8s done
+#9 exporting manifest sha256:ff3f372da113e55de0b7ab47fe6081d8be08265c6cc4e800f1ca0546c84c2142 done
+#9 exporting config sha256:2b211000adecff9a5e19a53f1284b68dca6ce07bfd0ebd4882d6761cfeefc50d done
+#9 exporting attestation manifest sha256:04504fb9a12716a46651d85e7b0d3109a79a6c9888af8af712789a1ed405ae0b 0.0s done
+#9 exporting manifest list sha256:e3595261f41efd20f59379c46a099ee7948af29fd0cab412f124f99b77f1e4c9 0.0s done
+#9 naming to docker.io/library/go-home-inventory-bug4-candidate:latest done
+#9 unpacking to docker.io/library/go-home-inventory-bug4-candidate:latest
+#9 unpacking to docker.io/library/go-home-inventory-bug4-candidate:latest 0.5s done
+#9 DONE 2.4s
 
-View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/auuj7ojpyqviac1murs7tpead
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/jutyomsh0t6y1w2slkon3agjs
