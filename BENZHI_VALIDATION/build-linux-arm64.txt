@@ -1,49 +1,41 @@
-exit_code=0
-docker.exe : #0 building with "desktop-linux" instance using docker driver
-At line:2 char:264
-+ ...  try { $out=& docker build --platform $platform -t "go-home-inventory ...
-+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (#0 building wit...g docker driver:String) [], RemoteException
-    + FullyQualifiedErrorId : NativeCommandError
- 
+#0 building with "desktop-linux" instance using docker driver
 
 #1 [internal] load build definition from benzhi.Dockerfile
 #1 transferring dockerfile: 128B done
 #1 DONE 0.0s
 
 #2 [internal] load metadata for docker.io/library/golang:1.22
-#2 DONE 0.2s
+#2 DONE 0.1s
 
-#3 [1/4] FROM docker.io/library/golang:1.22@sha256:1cf6c45ba39db9fd6db16922041d074a63c935556a05c5ccb62d181034df7f02
-#3 resolve docker.io/library/golang:1.22@sha256:1cf6c45ba39db9fd6db16922041d074a63c935556a05c5ccb62d181034df7f02 0.0s d
-one
+#3 [internal] load .dockerignore
+#3 transferring context: 143B done
 #3 DONE 0.0s
 
-#4 [2/4] WORKDIR /app
-#4 CACHED
+#4 [1/4] FROM docker.io/library/golang:1.22@sha256:1cf6c45ba39db9fd6db16922041d074a63c935556a05c5ccb62d181034df7f02
+#4 resolve docker.io/library/golang:1.22@sha256:1cf6c45ba39db9fd6db16922041d074a63c935556a05c5ccb62d181034df7f02 0.0s done
+#4 DONE 0.0s
 
-#5 [internal] load .dockerignore
-#5 transferring context: 2B done
+#5 [internal] load build context
+#5 transferring context: 14.80kB 0.0s done
 #5 DONE 0.0s
 
-#6 [internal] load build context
-#6 transferring context: 5.42kB done
-#6 DONE 0.0s
+#6 [2/4] WORKDIR /app
+#6 CACHED
 
 #7 [3/4] COPY . .
-#7 DONE 0.9s
+#7 DONE 0.0s
 
 #8 [4/4] RUN go build ./...
-#8 DONE 126.2s
+#8 DONE 103.3s
 
 #9 exporting to image
 #9 exporting layers
-#9 exporting layers 1.7s done
-#9 exporting manifest sha256:45969b21aee9e3a0cabf5fe4f0080a003bd2750310b28c747417badab102ae60 0.0s done
-#9 exporting config sha256:c73c4e5235f02a6a7443beb34500981322afa01c3763847a6d786104fd856cfb 0.0s done
-#9 exporting attestation manifest sha256:e387a7404b8424ae8d6c6a5cdc953db25116ea689c9937a940435fffb3994069 0.0s done
-#9 exporting manifest list sha256:4d8591ec4fbde357a94baea046c37ca4cd156b8a06819c5b959bf7d41d717baf 0.0s done
-#9 naming to docker.io/library/go-home-inventory-bug2-candidate-linux-arm64:latest done
-#9 DONE 1.8s
+#9 exporting layers 1.6s done
+#9 exporting manifest sha256:0533257f93d7316020890a761614fd6f9a4974654e908099ae87991caf3a24d9 done
+#9 exporting config sha256:00254b43b03aced2d296b31b3aa4208521a350add315494dd90e427cd46be36f done
+#9 exporting attestation manifest sha256:6bb7e735645c13cfebb6bdd1686538fdabe0bddd6867feab136e1909c53487ed 0.0s done
+#9 exporting manifest list sha256:008ef5c1522388ba43fcb45593c991daf62935c6105bcaf1faff5a4a1f0bfa4f done
+#9 naming to docker.io/library/go-home-inventory-bug2-candidate-arm64:latest done
+#9 DONE 1.7s
 
-View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/re8kz8afvquq9d8qkwlauefap
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/08nd1zzmirk5v8peh7jnzj3z0

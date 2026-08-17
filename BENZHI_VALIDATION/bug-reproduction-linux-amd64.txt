@@ -1,0 +1,67 @@
+task_type=diagnosis
+verification/private/all expected red; build expected green
+
+go version go1.22.12 linux/amd64
+--- FAIL: TestVerificationRoomFilterNormalizesCaseAndSpace (0.00s)
+    room_filter_verification_test.go:18: room filter returned []
+FAIL
+FAIL	github.com/zhangkui/go-home-inventory/internal/location	0.002s
+FAIL
+--- FAIL: TestPrivateRoomFilterMatchesNormalizedNames (0.00s)
+    location_normalization_private_test.go:14: items = []
+--- FAIL: TestPrivateRoomFilterMatchesNormalizedNames (0.00s)
+    location_normalization_private_test.go:14: items = []
+--- FAIL: TestPrivateRoomFilterMatchesNormalizedNames (0.00s)
+    location_normalization_private_test.go:14: items = []
+--- FAIL: TestPrivateRoomFilterMatchesNormalizedNames (0.00s)
+    location_normalization_private_test.go:14: items = []
+--- FAIL: TestPrivateRoomFilterMatchesNormalizedNames (0.00s)
+    location_normalization_private_test.go:14: items = []
+--- FAIL: TestPrivateRoomFilterMatchesNormalizedNames (0.00s)
+    location_normalization_private_test.go:14: items = []
+--- FAIL: TestPrivateRoomFilterMatchesNormalizedNames (0.00s)
+    location_normalization_private_test.go:14: items = []
+--- FAIL: TestPrivateRoomFilterMatchesNormalizedNames (0.00s)
+    location_normalization_private_test.go:14: items = []
+--- FAIL: TestPrivateRoomFilterMatchesNormalizedNames (0.00s)
+    location_normalization_private_test.go:14: items = []
+--- FAIL: TestPrivateRoomFilterMatchesNormalizedNames (0.00s)
+    location_normalization_private_test.go:14: items = []
+--- FAIL: TestPrivateRoomFilterMatchesNormalizedNames (0.00s)
+    location_normalization_private_test.go:14: items = []
+--- FAIL: TestPrivateRoomFilterMatchesNormalizedNames (0.00s)
+    location_normalization_private_test.go:14: items = []
+--- FAIL: TestPrivateRoomFilterMatchesNormalizedNames (0.00s)
+    location_normalization_private_test.go:14: items = []
+--- FAIL: TestPrivateRoomFilterMatchesNormalizedNames (0.00s)
+    location_normalization_private_test.go:14: items = []
+--- FAIL: TestPrivateRoomFilterMatchesNormalizedNames (0.00s)
+    location_normalization_private_test.go:14: items = []
+--- FAIL: TestPrivateRoomFilterMatchesNormalizedNames (0.00s)
+    location_normalization_private_test.go:14: items = []
+--- FAIL: TestPrivateRoomFilterMatchesNormalizedNames (0.00s)
+    location_normalization_private_test.go:14: items = []
+--- FAIL: TestPrivateRoomFilterMatchesNormalizedNames (0.00s)
+    location_normalization_private_test.go:14: items = []
+--- FAIL: TestPrivateRoomFilterMatchesNormalizedNames (0.00s)
+    location_normalization_private_test.go:14: items = []
+--- FAIL: TestPrivateRoomFilterMatchesNormalizedNames (0.00s)
+    location_normalization_private_test.go:14: items = []
+FAIL
+FAIL	github.com/zhangkui/go-home-inventory/internal/location	0.003s
+FAIL
+?   	github.com/zhangkui/go-home-inventory/cmd/server	[no test files]
+?   	github.com/zhangkui/go-home-inventory/internal/domain	[no test files]
+ok  	github.com/zhangkui/go-home-inventory/internal/httpapi	0.004s
+ok  	github.com/zhangkui/go-home-inventory/internal/inventory	0.003s
+--- FAIL: TestPrivateRoomFilterMatchesNormalizedNames (0.00s)
+    location_normalization_private_test.go:14: items = []
+--- FAIL: TestVerificationRoomFilterNormalizesCaseAndSpace (0.00s)
+    room_filter_verification_test.go:18: room filter returned []
+FAIL
+FAIL	github.com/zhangkui/go-home-inventory/internal/location	0.003s
+ok  	github.com/zhangkui/go-home-inventory/internal/reminder	0.003s
+ok  	github.com/zhangkui/go-home-inventory/internal/repair	0.003s
+ok  	github.com/zhangkui/go-home-inventory/internal/warranty	0.003s
+FAIL
+RESULTS build=0 verification=1 private=1 all=1 no_git=0 answer_scan=0
