@@ -1,0 +1,23 @@
+package inventory
+
+import (
+	"github.com/zhangkui/go-home-inventory/internal/domain"
+	"testing"
+	"time"
+)
+
+func TestVerificationReleasedSerialCanBeReused(t *testing.T) {
+	store := NewStore(time.Now)
+	first := domain.Item{Name: "Camera", SerialNumber: "CAM-OLD", PurchaseDate: time.Now(), WarrantyMonths: 12}
+	created, err := store.Create(first)
+	if err != nil {
+		t.Fatal(err)
+	}
+	first.SerialNumber = "CAM-NEW"
+	if _, err := store.Update(created.ID, first); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := store.Create(domain.Item{Name: "Speaker", SerialNumber: " cam-old ", PurchaseDate: time.Now(), WarrantyMonths: 12}); err != nil {
+		t.Fatalf("released serial should be reusable: %v", err)
+	}
+}
