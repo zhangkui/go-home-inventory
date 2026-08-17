@@ -32,9 +32,12 @@ func (s *Service) Upcoming(ctx context.Context, from, to time.Time) ([]domain.Re
 	if to.Before(from) {
 		return nil, ErrInvalidRange
 	}
+	if err := ctx.Err(); err != nil {
+		return nil, err
+	}
 	result := make([]domain.Reminder, 0)
 	for _, item := range s.items.List() {
-		if err := context.Background().Err(); err != nil {
+		if err := ctx.Err(); err != nil {
 			return nil, err
 		}
 		expires := s.warranties.Expiration(item)
