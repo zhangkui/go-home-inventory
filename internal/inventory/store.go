@@ -74,6 +74,7 @@ func (s *Store) Update(id string, replacement domain.Item) (domain.Item, error) 
 	if !ok {
 		return domain.Item{}, ErrNotFound
 	}
+	oldSerial := normalizeSerial(current.SerialNumber)
 	serial := normalizeSerial(replacement.SerialNumber)
 	if owner, exists := s.serialToID[serial]; exists && owner != id {
 		return domain.Item{}, ErrSerialDuplicate
@@ -81,6 +82,9 @@ func (s *Store) Update(id string, replacement domain.Item) (domain.Item, error) 
 	replacement.ID, replacement.CreatedAt, replacement.UpdatedAt = current.ID, current.CreatedAt, s.now()
 	replacement.Name, replacement.Category, replacement.SerialNumber = strings.TrimSpace(replacement.Name), strings.TrimSpace(replacement.Category), serial
 	replacement.Room, replacement.Position = strings.TrimSpace(replacement.Room), strings.TrimSpace(replacement.Position)
+	if oldSerial != serial {
+		delete(s.serialToID, oldSerial)
+	}
 	s.items[id], s.serialToID[serial] = replacement, id
 	return replacement, nil
 }
