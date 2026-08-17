@@ -1,0 +1,20 @@
+package location
+
+import (
+	"github.com/zhangkui/go-home-inventory/internal/domain"
+	"github.com/zhangkui/go-home-inventory/internal/inventory"
+	"testing"
+	"time"
+)
+
+func TestVerificationRoomFilterNormalizesCaseAndSpace(t *testing.T) {
+	store := inventory.NewStore(time.Now)
+	item, err := store.Create(domain.Item{Name: "Vacuum", SerialNumber: "VAC-1", PurchaseDate: time.Now(), WarrantyMonths: 12, Room: "  Living Room  ", Position: "Closet"})
+	if err != nil {
+		t.Fatal(err)
+	}
+	items := NewService(store).Filter(" living room ", "")
+	if len(items) != 1 || items[0].ID != item.ID {
+		t.Fatalf("room filter returned %+v", items)
+	}
+}
