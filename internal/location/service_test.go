@@ -18,3 +18,20 @@ func TestFilterByLocation(t *testing.T) {
 		t.Fatalf("items = %+v", items)
 	}
 }
+
+func TestFilterWithBlankRoomDoesNotFilter(t *testing.T) {
+	store := inventory.NewStore(time.Now)
+	for _, item := range []domain.Item{
+		{Name: "TV", SerialNumber: "tv-1", PurchaseDate: time.Now(), WarrantyMonths: 12, Room: "Living Room"},
+		{Name: "Vacuum", SerialNumber: "vac-1", PurchaseDate: time.Now(), WarrantyMonths: 12, Room: "Storage"},
+	} {
+		if _, err := store.Create(item); err != nil {
+			t.Fatal(err)
+		}
+	}
+
+	items := NewService(store).Filter("   ", "")
+	if len(items) != 2 {
+		t.Fatalf("items = %+v", items)
+	}
+}

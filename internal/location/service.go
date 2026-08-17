@@ -16,7 +16,7 @@ func (s *Service) Filter(room, position string) []domain.Item {
 	room, position = strings.TrimSpace(room), strings.TrimSpace(position)
 	result := make([]domain.Item, 0)
 	for _, item := range s.items.List() {
-		if room != "" && item.Room != room {
+		if room != "" && !strings.EqualFold(item.Room, room) {
 			continue
 		}
 		if position != "" && !strings.EqualFold(item.Position, position) {
