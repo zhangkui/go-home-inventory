@@ -78,6 +78,12 @@ func (s *Store) Update(id string, replacement domain.Item) (domain.Item, error) 
 	if owner, exists := s.serialToID[serial]; exists && owner != id {
 		return domain.Item{}, ErrSerialDuplicate
 	}
+	// Release the previously occupied serial so that, when the serial number
+	// changes, the old value can be reused by another item. The new serial is
+	// (re)claimed below; identical serials are a no-op here.
+	if oldSerial := normalizeSerial(current.SerialNumber); oldSerial != serial {
+		delete(s.serialToID, oldSerial)
+	}
 	replacement.ID, replacement.CreatedAt, replacement.UpdatedAt = current.ID, current.CreatedAt, s.now()
 	replacement.Name, replacement.Category, replacement.SerialNumber = strings.TrimSpace(replacement.Name), strings.TrimSpace(replacement.Category), serial
 	replacement.Room, replacement.Position = strings.TrimSpace(replacement.Room), strings.TrimSpace(replacement.Position)
