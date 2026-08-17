@@ -32,9 +32,12 @@ func (s *Service) Upcoming(ctx context.Context, from, to time.Time) ([]domain.Re
 	if to.Before(from) {
 		return nil, ErrInvalidRange
 	}
+	if err := ctx.Err(); err != nil {
+		return nil, err
+	}
 	result := make([]domain.Reminder, 0)
 	for _, item := range s.items.List() {
-		if err := context.Background().Err(); err != nil {
+		if err := ctx.Err(); err != nil {
 			return nil, err
 		}
 		expires := s.warranties.Expiration(item)
@@ -42,6 +45,9 @@ func (s *Service) Upcoming(ctx context.Context, from, to time.Time) ([]domain.Re
 			continue
 		}
 		result = append(result, domain.Reminder{ItemID: item.ID, ItemName: item.Name, SerialNumber: item.SerialNumber, ExpiresAt: expires, DaysLeft: int(expires.Sub(s.now().In(s.zone)).Hours() / 24)})
+	}
+	if err := ctx.Err(); err != nil {
+		return nil, err
 	}
 	sort.Slice(result, func(i, j int) bool { return result[i].ExpiresAt.Before(result[j].ExpiresAt) })
 	return result, nil
