@@ -1,0 +1,50 @@
+exit_code=0
+docker.exe : #0 building with "desktop-linux" instance using docker driver
+At line:2 char:264
++ ...  try { $out=& docker build --platform $platform -t "go-home-inventory ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (#0 building wit...g docker driver:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+#1 [internal] load build definition from benzhi.Dockerfile
+#1 transferring dockerfile: 128B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/golang:1.22
+#2 DONE 0.4s
+
+#3 [1/4] FROM docker.io/library/golang:1.22@sha256:1cf6c45ba39db9fd6db16922041d074a63c935556a05c5ccb62d181034df7f02
+#3 resolve docker.io/library/golang:1.22@sha256:1cf6c45ba39db9fd6db16922041d074a63c935556a05c5ccb62d181034df7f02 0.0s d
+one
+#3 DONE 0.0s
+
+#4 [2/4] WORKDIR /app
+#4 CACHED
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B 0.0s done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 6.07kB 0.0s done
+#6 DONE 0.1s
+
+#7 [3/4] COPY . .
+#7 DONE 0.2s
+
+#8 [4/4] RUN go build ./...
+#8 DONE 130.8s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 3.5s done
+#9 exporting manifest sha256:668a8f74cd1e787d4d5d19b90a5e8153b132504ef245eb5f6f46b79ca6f615b2 0.0s done
+#9 exporting config sha256:f190751e2764cfe5baba2caabd71c7956bca0a3dc2ea6232821ea31c20609ef0 0.0s done
+#9 exporting attestation manifest sha256:6f6c008475270f6257afa571088643e31e1ff30d3f08b20c75d3dbbff73a2d4f 0.0s done
+#9 exporting manifest list sha256:4c39e710433cc955de26133bab9debd33efce95c10ed7933dbc5c9b3c37ed8c5 0.0s done
+#9 naming to docker.io/library/go-home-inventory-bug1-candidate-linux-arm64:latest
+#9 naming to docker.io/library/go-home-inventory-bug1-candidate-linux-arm64:latest done
+#9 DONE 3.8s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/a68o2nl5l6dvr95go0k2x28cq
