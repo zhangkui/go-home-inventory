@@ -31,7 +31,7 @@ func (s *Service) Add(value domain.Repair) (domain.Repair, error) {
 	if _, err := s.items.Get(value.ItemID); err != nil {
 		return domain.Repair{}, err
 	}
-	if value.OccurredAt.IsZero() || value.CostCents <= 0 {
+	if value.OccurredAt.IsZero() || value.CostCents < 0 {
 		return domain.Repair{}, ErrInvalidRepair
 	}
 	s.mu.Lock()
